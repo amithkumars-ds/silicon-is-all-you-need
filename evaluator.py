@@ -10,12 +10,14 @@ class Evaluator:
             right = self.visit(node.right)
             if node.op.type == TokenType.PLUS:
                 return left + right
+            if node.op.type == TokenType.MINUS:
+                return left - right
 
 if __name__ == '__main__':
     from lexer import Lexer
     from parser import Parser
 
-    lexer = Lexer('3+4')
+    lexer = Lexer('4-7')
     tokens = lexer.tokenize()
     ast = Parser(tokens).parse()
 

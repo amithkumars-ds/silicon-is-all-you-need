@@ -1,6 +1,7 @@
 class TokenType:
     NUMBER = 'NUMBER'
     PLUS = 'PLUS'
+    MINUS = 'MINUS'
     ASSIGN = 'ASSIGN'
     IDENTIFIER = 'IDENTIFIER'
     EOF = 'EOF'
@@ -47,6 +48,9 @@ class Lexer:
             if self.current_char == '+':
                 self.advance()
                 return Token(TokenType.PLUS, '+')
+            if self.current_char == '-':
+                self.advance()
+                return Token(TokenType.MINUS, '-')
             if self.current_char == '=':
                 self.advance()
                 return Token(TokenType.ASSIGN, '=')
