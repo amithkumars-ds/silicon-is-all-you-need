@@ -56,6 +56,8 @@ class Lexer:
         tokens = []
         while self.current_char is not None:
             tokens.append(self.get_next_token())
+        tokens.append(Token(TokenType.EOF, None))
+        
         return tokens
         
 # lexer = Lexer('10+5')
