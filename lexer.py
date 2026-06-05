@@ -3,6 +3,7 @@ class TokenType:
     PLUS = 'PLUS'
     MINUS = 'MINUS'
     MULTIPLY = 'MULTIPLY'
+    DIVIDE = 'DIVIDE'
     ASSIGN = 'ASSIGN'
     IDENTIFIER = 'IDENTIFIER'
     EOF = 'EOF'
@@ -55,6 +56,9 @@ class Lexer:
             if self.current_char == '*':
                 self.advance()
                 return Token(TokenType.MULTIPLY, '*')
+            if self.current_char == '/':
+                self.advance()
+                return Token(TokenType.DIVIDE, '/')
             if self.current_char == '=':
                 self.advance()
                 return Token(TokenType.ASSIGN, '=')

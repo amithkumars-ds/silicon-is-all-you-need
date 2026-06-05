@@ -14,12 +14,14 @@ class Evaluator:
                 return left - right
             if node.op.type == TokenType.MULTIPLY:
                 return left * right
+            if node.op.type == TokenType.DIVIDE:
+                return left // right
 
 if __name__ == '__main__':
     from lexer import Lexer
     from parser import Parser
 
-    lexer = Lexer('4*7')
+    lexer = Lexer('44/7')
     tokens = lexer.tokenize()
     ast = Parser(tokens).parse()
 
