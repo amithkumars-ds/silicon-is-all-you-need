@@ -42,14 +42,24 @@ class Parser:
 
         return left
     
+    def factor(self):
+        token = self.current_token
+        if token.type == TokenType.NUMBER:
+            self.advance()
+            return NumberNode(token)
+        if token.type == TokenType.LPAREN:
+            self.advance()
+            result = self.expr()
+            self.advance()
+            return result 
+    
     def term(self):
-        left = NumberNode(self.current_token)
-        self.advance()
+        left = self.factor()
 
         while self.current_token.type in (TokenType.MULTIPLY, TokenType.DIVIDE):
             op = self.current_token
             self.advance()
-            right = NumberNode(self.current_token)
+            right = self.factor()
             self.advance()
             left = BinOpNode(left, op, right)
 

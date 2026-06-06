@@ -21,7 +21,7 @@ if __name__ == '__main__':
     from lexer import Lexer
     from parser import Parser
 
-    lexer = Lexer('10 + 4 / 2')
+    lexer = Lexer('(2 + 3) * (4 + 1)')
     tokens = lexer.tokenize()
     ast = Parser(tokens).parse()
 

@@ -7,6 +7,8 @@ class TokenType:
     ASSIGN = 'ASSIGN'
     IDENTIFIER = 'IDENTIFIER'
     EOF = 'EOF'
+    LPAREN = 'LPAREN'
+    RPAREN = 'RPAREN'
 
 class Token:
     def __init__(self, type, value):
@@ -62,6 +64,13 @@ class Lexer:
             if self.current_char == '=':
                 self.advance()
                 return Token(TokenType.ASSIGN, '=')
+            if self.current_char == '(':
+                self.advance()
+                return Token(TokenType.LPAREN, '(')
+            if self.current_char == ')':
+                self.advance()
+                return Token(TokenType.RPAREN, ')')
+            raise Exception(f"Unkown character: {self.current_char}")
         return Token(TokenType.EOF, None)
     
     def tokenize(self):
@@ -71,6 +80,3 @@ class Lexer:
         tokens.append(Token(TokenType.EOF, None))
         
         return tokens
-        
-# lexer = Lexer('10+5')
-# print(lexer.tokenize())
