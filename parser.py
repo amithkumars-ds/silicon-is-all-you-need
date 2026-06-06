@@ -1,3 +1,5 @@
+from lexer import TokenType
+
 class NumberNode:
     def __init__(self, token):
         self.token = token
@@ -30,24 +32,25 @@ class Parser:
         return self.expr()
     
     def expr(self):
+        left = self.term()
+
+        while self.current_token.type in (TokenType.PLUS,TokenType.MINUS):
+            op = self.current_token
+            self.advance()
+            right = self.term()
+            left = BinOpNode(left, op, right)
+
+        return left
+    
+    def term(self):
         left = NumberNode(self.current_token)
         self.advance()
 
-        op = self.current_token
-        self.advance()
+        while self.current_token.type in (TokenType.MULTIPLY, TokenType.DIVIDE):
+            op = self.current_token
+            self.advance()
+            right = NumberNode(self.current_token)
+            self.advance()
+            left = BinOpNode(left, op, right)
 
-        right = NumberNode(self.current_token)
-        self.advance()
-
-        return BinOpNode(left, op, right)
-    
-
-
-from lexer import Lexer
-lexer = Lexer('10+5')
-tokens = lexer.tokenize()
-print(tokens)
-
-parser  = Parser(tokens)
-ast = parser.parse()
-print(ast)
+        return left
