@@ -42,6 +42,13 @@ class Lexer:
             self.advance()
         return Token(TokenType.NUMBER, int(result))
     
+    def identifier(self):
+        result = ''
+        while self.current_char is not None and self.current_char.isalnum():
+            result += self.current_char
+            self.advance()
+        return Token(TokenType.IDENTIFIER, str(result))
+
     def get_next_token(self):
         while self.current_char is not None:
             if self.current_char == ' ':
@@ -70,6 +77,8 @@ class Lexer:
             if self.current_char == ')':
                 self.advance()
                 return Token(TokenType.RPAREN, ')')
+            if self.current_char.isalpha():
+                return self.identifier()
             raise Exception(f"Unkown character: {self.current_char}")
         return Token(TokenType.EOF, None)
     
