@@ -1,5 +1,13 @@
 from lexer import TokenType
 
+class CallNode:
+    def __init__(self, name, args):
+        self.name = name # print
+        self.args = args # list of AST nodes inside the ()
+
+    def __repr__(self):
+        return f"CallNode({self.name}, {self.args})"   
+    
 class NumberNode:
     def __init__(self, token):
         self.token = token
@@ -80,7 +88,18 @@ class Parser:
             return result 
         if token.type == TokenType.IDENTIFIER:
             self.advance()
-            return VarNode(token)
+            args = []
+            if self.current_token.type == TokenType.LPAREN:
+                self.advance()
+                while self.current_token.type != TokenType.RPAREN:
+                    args.append(self.expr())
+                    if self.current_token.type == TokenType.COMMA:
+                        self.advance()
+                self.advance()
+                return CallNode(token.value, args)
+            else:
+                return VarNode(token)
+
     
     def term(self):
         left = self.factor()
@@ -89,7 +108,6 @@ class Parser:
             op = self.current_token
             self.advance()
             right = self.factor()
-            self.advance()
             left = BinOpNode(left, op, right)
 
         return left

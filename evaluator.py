@@ -1,11 +1,16 @@
 from lexer import TokenType
-from parser import BinOpNode, NumberNode, VarNode, AssignNode
+from parser import BinOpNode, NumberNode, VarNode, AssignNode, CallNode
 
 class Evaluator:
     def __init__(self):
         self.symbol_table = {}
 
     def visit(self, node):
+        if isinstance(node, CallNode):
+            if node.name == 'printk':
+                args = [self.visit(arg) for arg in node.args]
+                print(*args)
+                return None
         if isinstance(node, NumberNode):
             return node.value
         if isinstance(node, VarNode):
@@ -32,9 +37,8 @@ if __name__ == '__main__':
 
     evaluator = Evaluator()
 
-    for line in ['x = 10', 'y = 5', 'x + y']:
+    for line in ['x = 10', 'y = 5', 'printk(x)', 'printk(x + y)', 'printk(x, y, x + y)']:
         lexer = Lexer(line)
         tokens = lexer.tokenize()
         ast = Parser(tokens).parse()
         result = evaluator.visit(ast)
-        print(result)

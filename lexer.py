@@ -9,6 +9,7 @@ class TokenType:
     EOF = 'EOF'
     LPAREN = 'LPAREN'
     RPAREN = 'RPAREN'
+    COMMA = 'COMMA'
 
 class Token:
     def __init__(self, type, value):
@@ -79,6 +80,9 @@ class Lexer:
                 return Token(TokenType.RPAREN, ')')
             if self.current_char.isalpha():
                 return self.identifier()
+            if self.current_char == ',':
+                self.advance()
+                return Token(TokenType.COMMA, ',')
             raise Exception(f"Unkown character: {self.current_char}")
         return Token(TokenType.EOF, None)
     
