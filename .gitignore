@@ -1,2 +1,7 @@
 # cache files
 __pycache__/*
+*.py[cod]
+
+
+# notebooks
+notebooks/
