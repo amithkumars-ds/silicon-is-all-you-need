@@ -15,6 +15,28 @@ class NumberNode:
     
     def __repr__(self):
         return f"NumberNode({self.value})"
+    
+class IfNode:
+    def __init__(self, condition, true_expr, false_expr=None):
+        self.condition = condition
+        self.true_expr = true_expr
+        self.false_expr = false_expr
+
+    def __repr__(self):
+        return f'IfNode({self.condition}, {self.true_expr}, {self.false_expr})'
+    
+class CompareNode:
+    def __init__(self, left, op, right):
+        self.left = left
+        self.op = op
+        self.right = right
+
+    def __repr__(self):
+        return f'CompareNode({self.left}, {self.op}, {self.right})'
+    
+class NotNode:
+    def __init__(self, node):
+        self.node = node
 
 class BinOpNode:
     def __init__(self, left, op, right):
@@ -52,17 +74,21 @@ class Parser:
             self.current_token = self.tokens[self.pos] 
 
     def parse(self):
+        if self.current_token.type == TokenType.IF:
+            return self.if_expr()
+        
         if (self.current_token.type == TokenType.IDENTIFIER and
-            self.pos + 1 < len(self.tokens) and 
-            self.tokens[self.pos + 1].type == TokenType.ASSIGN):
+            self.pos+1 < len(self.tokens) and
+            self.tokens[self.pos+1].type == TokenType.ASSIGN):
             return self.assignment()
-        return self.expr()
+        
+        return self.comparison()
     
     def assignment(self):
         name = self.current_token.value
         self.advance() # skip identifier
         self.advance() # skip assignment = 
-        value = self.expr()
+        value = self.comparison()
         return AssignNode(name, value)
     
     def expr(self):
@@ -86,6 +112,9 @@ class Parser:
             result = self.expr()
             self.advance()
             return result 
+        if token.type == TokenType.NOT:
+            self.advance()
+            return NotNode(self.factor())
         if token.type == TokenType.IDENTIFIER:
             self.advance()
             args = []
@@ -111,3 +140,37 @@ class Parser:
             left = BinOpNode(left, op, right)
 
         return left
+    
+    def if_expr(self):
+        self.advance()
+
+        condition = self.comparison()
+        true_expr = self.comparison()
+
+        false_expr = None
+        if self.current_token.type == TokenType.ELSE:
+            self.advance()
+            false_expr = self.comparison()
+
+        return IfNode(condition, true_expr, false_expr)
+    
+
+    def comparison(self):
+        left = self.expr()
+
+        if self.current_token.type in (
+            TokenType.GREATER_THAN,
+            TokenType.GREATER_THAN_EQUAL,
+            TokenType.LESSER_THAN,
+            TokenType.LESSER_THAN_EQUAL,
+            TokenType.COMPARISON_EQUALS,
+            TokenType.COMPARISON_NOT_EQUALS
+        ):
+            op = self.current_token
+            self.advance()
+            right = self.expr()
+            return CompareNode(left, op, right)
+        
+        return left
+    
+    
