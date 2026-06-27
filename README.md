@@ -1,45 +1,67 @@
-# nand2tetris
+# silicon-is-all-you-need
 
-``` text
+```
 +--------------------------------------------------+
 |          FROM NAND TO A COMPUTER                 |
-|                0s • 1s • LOGIC                   |
+|                0s  •  1s  •  LOGIC               |
 +--------------------------------------------------+
 ```
 
-> Building a computer from first principles.
+> Building a computer from first principles — gates, chips, CPU, OS, and beyond.
+
+---
 
 ## Roadmap
 
-``` text
-[NAND] ======> [GATES] ======> [ALU]
-   |               |              |
-   v               v              v
- [CPU] ======> [OS] ======> [TETRIS]
-                                  |
-                                  v
-                              [SUDOKU?]
 ```
+[NAND] ══════> [GATES] ══════> [ALU  ]
+   |               |               |
+   v               v               v
+[CPU ] ══════> [OS   ] ══════> [TETRIS]
+                                    |
+                                    v
+                                [SUDOKU?]
+```
+
+---
 
 ## Projects
 
-``` text
-[x] Boolean Logic
-[ ] Boolean Arithmetic
-[ ] Memory
-[ ] Machine Language
-[ ] Computer Architecture
-[ ] Assembler
-[ ] VM
-[ ] Compiler
-[ ] Operating System
-[ ] Tetris
-[ ] Sudoku
+### Part 1 — Hardware
+
+- [x] **Boolean Logic** — 15 chips from NOT to MUX/DMUX, all reduced to NAND
+- [ ] **Boolean Arithmetic** — adders, incrementer, ALU
+- [ ] **Memory** — flip-flops, registers, RAM, program counter
+- [ ] **Machine Language** — assembly programs on the Hack platform
+- [ ] **Computer Architecture** — CPU + memory + instruction fetch cycle
+
+### Part 2 — Software
+
+- [ ] **Assembler** — translates Hack assembly to binary
+- [ ] **VM I: Stack** — stack arithmetic and memory segments
+- [ ] **VM II: Control** — branching, functions, call stack
+- [ ] **Compiler I: Syntax** — tokenizer and parser for Jack
+- [ ] **Compiler II: Code Generation** — Jack → VM code
+- [ ] **Operating System** — math, memory, screen, keyboard, output
+- [ ] **Tetris** — it runs
+- [ ] **Sudoku?** — it might
+
+---
+
+## Structure
+
 ```
+silicon-is-all-you-need/
+├── Part1-Hardware/
+│   └── 01-BooleanLogic/
+└── Part2-Software/
+```
+
+---
 
 ## Philosophy
 
-``` text
+```
 Everything begins with NAND.
 Everything else is abstraction.
 ```
