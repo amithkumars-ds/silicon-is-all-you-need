@@ -53,7 +53,8 @@
 ```
 silicon-is-all-you-need/
 ├── Part1-Hardware/
-│   └── 01-BooleanLogic/
+│   └── Project1-BooleanLogic/
+│   └── Project2-BooleanArithmetic/
 └── Part2-Software/
 ```
 
