@@ -1,0 +1,15 @@
+// File name: projects/1/Mux.hdl
+/** 
+ * Multiplexor:
+ * if (sel = 0) out = a, else out = b
+ */
+CHIP Mux{
+    IN a,b,sel;
+    OUT out;
+
+    PARTS:
+    Nand(a=sel,b=sel,out=ntsel);
+    Nand(a=b,b=sel,out=bNs);
+    Nand(a=ntsel,b=a,out=ntselNa);
+    Nand(a=bNs,b=ntselNa,out=out);
+}

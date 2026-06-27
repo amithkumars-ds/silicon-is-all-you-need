@@ -1,0 +1,14 @@
+// File name: projects/1/Or.hdl
+/**
+ * Or gate:
+ * if (a or b) out = 1, else out = 0 
+ */
+CHIP Or {
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    Nand(a=a,b=a,out=aNand);
+    Nand(a=b,b=b,out=bNand);
+    Nand(a=aNand,b=bNand,out=out);
+}

@@ -1,0 +1,78 @@
+// File name: projects/1/Mux16.hdl
+/**
+ * 16-bit multiplexor: 
+ * for i = 0, ..., 15:
+ * if (sel = 0) out[i] = a[i], else out[i] = b[i]
+ */
+CHIP Mux16 {
+    IN a[16], b[16], sel;
+    OUT out[16];
+
+    PARTS:
+    Nand(a=sel,b=sel,out=ntsel);
+
+    Nand(a=b[0],b=sel,out=bNs0);
+    Nand(a=ntsel,b=a[0],out=ntselNa0);
+    Nand(a=bNs0,b=ntselNa0,out=out[0]);
+
+    Nand(a=b[1],b=sel,out=bNs1);
+    Nand(a=ntsel,b=a[1],out=ntselNa1);
+    Nand(a=bNs1,b=ntselNa1,out=out[1]);
+
+    Nand(a=b[2],b=sel,out=bNs2);
+    Nand(a=ntsel,b=a[2],out=ntselNa2);
+    Nand(a=bNs2,b=ntselNa2,out=out[2]);
+
+    Nand(a=b[3],b=sel,out=bNs3);
+    Nand(a=ntsel,b=a[3],out=ntselNa3);
+    Nand(a=bNs3,b=ntselNa3,out=out[3]);
+
+    Nand(a=b[4],b=sel,out=bNs4);
+    Nand(a=ntsel,b=a[4],out=ntselNa4);
+    Nand(a=bNs4,b=ntselNa4,out=out[4]);
+
+    Nand(a=b[5],b=sel,out=bNs5);
+    Nand(a=ntsel,b=a[5],out=ntselNa5);
+    Nand(a=bNs5,b=ntselNa5,out=out[5]);
+
+    Nand(a=b[6],b=sel,out=bNs6);
+    Nand(a=ntsel,b=a[6],out=ntselNa6);
+    Nand(a=bNs6,b=ntselNa6,out=out[6]);
+
+    Nand(a=b[7],b=sel,out=bNs7);
+    Nand(a=ntsel,b=a[7],out=ntselNa7);
+    Nand(a=bNs7,b=ntselNa7,out=out[7]);
+
+    Nand(a=b[8],b=sel,out=bNs8);
+    Nand(a=ntsel,b=a[8],out=ntselNa8);
+    Nand(a=bNs8,b=ntselNa8,out=out[8]);
+
+    Nand(a=b[9],b=sel,out=bNs9);
+    Nand(a=ntsel,b=a[9],out=ntselNa9);
+    Nand(a=bNs9,b=ntselNa9,out=out[9]);
+
+    Nand(a=b[10],b=sel,out=bNs10);
+    Nand(a=ntsel,b=a[10],out=ntselNa10);
+    Nand(a=bNs10,b=ntselNa10,out=out[10]);
+
+    Nand(a=b[11],b=sel,out=bNs11);
+    Nand(a=ntsel,b=a[11],out=ntselNa11);
+    Nand(a=bNs11,b=ntselNa11,out=out[11]);
+
+    Nand(a=b[12],b=sel,out=bNs12);
+    Nand(a=ntsel,b=a[12],out=ntselNa12);
+    Nand(a=bNs12,b=ntselNa12,out=out[12]);
+
+    Nand(a=b[13],b=sel,out=bNs13);
+    Nand(a=ntsel,b=a[13],out=ntselNa13);
+    Nand(a=bNs13,b=ntselNa13,out=out[13]);
+
+    Nand(a=b[14],b=sel,out=bNs14);
+    Nand(a=ntsel,b=a[14],out=ntselNa14);
+    Nand(a=bNs14,b=ntselNa14,out=out[14]);
+
+    Nand(a=b[15],b=sel,out=bNs15);
+    Nand(a=ntsel,b=a[15],out=ntselNa15);
+    Nand(a=bNs15,b=ntselNa15,out=out[15]);
+
+}

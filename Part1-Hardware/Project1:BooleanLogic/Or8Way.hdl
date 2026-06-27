@@ -1,0 +1,38 @@
+// File name: projects/1/Or8Way.hdl
+/**
+ * 8-way Or gate: 
+ * out = in[0] Or in[1] Or ... Or in[7]
+ */
+CHIP Or8Way {
+    IN in[8];
+    OUT out;
+
+    PARTS:
+    Nand(a=in[0],b=in[0],out=notin0);
+    Nand(a=in[1],b=in[1],out=notin1);
+    Nand(a=in[2],b=in[2],out=notin2);
+    Nand(a=in[3],b=in[3],out=notin3);
+    Nand(a=in[4],b=in[4],out=notin4);
+    Nand(a=in[5],b=in[5],out=notin5);
+    Nand(a=in[6],b=in[6],out=notin6);
+    Nand(a=in[7],b=in[7],out=notin7);
+
+    Nand(a=notin0,b=notin1,out=in0orin1);
+    Nand(a=notin2,b=notin3,out=in2orin3);
+    Nand(a=notin4,b=notin5,out=in4orin5);
+    Nand(a=notin6,b=notin7,out=in6orin7);
+
+    Nand(a=in0orin1,b=in0orin1,out=noti0Nnoti1);
+    Nand(a=in2orin3,b=in2orin3,out=noti2Nnoti3);
+    Nand(a=in4orin5,b=in4orin5,out=noti4Nnoti5);
+    Nand(a=in6orin7,b=in6orin7,out=noti6Nnoti7);
+
+    Nand(a=noti0Nnoti1,b=noti2Nnoti3,out=i0ori1ori2ori3);
+    Nand(a=noti4Nnoti5,b=noti6Nnoti7,out=i4ori5ori6ori7);
+
+    Nand(a=i0ori1ori2ori3,b=i0ori1ori2ori3,out=Ni03);
+    Nand(a=i4ori5ori6ori7,b=i4ori5ori6ori7,out=Ni47);
+
+    Nand(a=Ni03,b=Ni47,out=out);
+
+}
