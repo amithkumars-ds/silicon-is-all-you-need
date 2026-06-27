@@ -8,5 +8,10 @@ CHIP FullAdder {
         carry;   // Left bit of a + b + c
 
     PARTS:
-    //// Replace this comment with your code.
+    Xor(a=a,b=b,out=axorb);
+    Xor(a=axorb,b=c,out=sum);
+
+    And(a=c,b=axorb,out=candaxorb);
+    And(a=a,b=b,out=aandb);
+    Or(a=candaxorb,b=aandb,out=carry);
 }
