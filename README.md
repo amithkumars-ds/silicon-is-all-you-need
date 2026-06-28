@@ -30,7 +30,7 @@
 ### Part 1 — Hardware
 
 - [x] **Boolean Logic** — 15 chips from NOT to MUX/DMUX, all reduced to NAND
-- [ ] **Boolean Arithmetic** — adders, incrementer, ALU
+- [x] **Boolean Arithmetic** — adders, incrementer, ALU
 - [ ] **Memory** — flip-flops, registers, RAM, program counter
 - [ ] **Machine Language** — assembly programs on the Hack platform
 - [ ] **Computer Architecture** — CPU + memory + instruction fetch cycle
