@@ -1,0 +1,36 @@
+site_name: Nand2Tetris Notes
+site_url: https://amithkumars-ds.github.io/silicon-is-all-you-need
+repo_url: https://github.com/amithkumars-ds/silicon-is-all-you-need
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  font:
+    text: DM Sans
+    code: JetBrains Mono
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - admonition
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - "Chapter 1: Boolean Logic":
+    - And Gate: ch01/and-gate.md
+    - Or Gate: ch01/or-gate.md

@@ -1,0 +1,45 @@
+:root {
+  --md-primary-fg-color:        #1B4FD8;
+  --md-primary-fg-color--light: #4472F5;
+  --md-primary-fg-color--dark:  #1240B8;
+  --md-accent-fg-color:         #F97316;
+
+  --md-default-bg-color:        #F8F9FF;
+  --md-default-fg-color:        #0F172A;
+
+  --md-code-bg-color:           #EEF2FF;
+  --md-code-fg-color:           #1E1B4B;
+}
+
+/* Slightly sportier heading weight */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1B4FD8;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid #E0E7FF;
+  padding-bottom: 0.3em;
+}
+
+/* Cleaner nav */
+.md-nav__title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #6366F1;
+}
+
+/* Warm white page surface */
+.md-content {
+  background: #FFFFFF;
+}
+
+/* Orange accent on code copy button hover */
+.md-clipboard:hover {
+  color: #F97316;
+}
