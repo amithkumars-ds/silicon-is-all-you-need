@@ -1,17 +1,7 @@
 # silicon-is-all-you-need
 
-```
-+--------------------------------------------------+
-|          FROM NAND TO A COMPUTER                 |
-|                0s  •  1s  •  LOGIC               |
-+--------------------------------------------------+
-```
-
 > Building a computer from first principles — gates, chips, CPU, OS, and beyond.
 
----
-
-## Roadmap
 
 ## Roadmap
 
