@@ -1,6 +1,6 @@
-# 3. AND Gate
+# 1.3 AND Gate
 
-## 3.1 Concept
+## Concept
 
 The AND gate performs the logical multiplication operation between two boolean values:
 
@@ -9,7 +9,7 @@ The AND gate performs the logical multiplication operation between two boolean v
 - If `a = 1`, `b = 0` then `out = 0`
 - If `a = 1`, `b = 1` then `out = 1`
 
-## 3.2 Truth Table
+## Truth Table
 
 | a  | b   | out |
 |:--:|:---:|:---:|
@@ -18,7 +18,7 @@ The AND gate performs the logical multiplication operation between two boolean v
 | 1  | 0   | 0   |
 | 1  | 1   | 1   |
 
-## 3.3 Implementation Using Nand Only
+## Implementation Using Nand Only
 
 ![And from Nand Gate](../images/3-and-from-nand.png)
 

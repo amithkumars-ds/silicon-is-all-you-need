@@ -1,6 +1,6 @@
-# 2. OR Gate
+# 1.2 OR Gate
 
-## 2.1 Concept
+## Concept
 
 The OR gate performs the logical addition operation between two boolean values:
 
@@ -9,7 +9,7 @@ The OR gate performs the logical addition operation between two boolean values:
 - If `a = 1`, `b = 0` then `out = 1`
 - If `a = 1`, `b = 1` then `out = 1`
 
-## 2.2 Truth Table
+## Truth Table
 
 | a  | b   | out |
 |:--:|:---:|:---:|
@@ -18,7 +18,7 @@ The OR gate performs the logical addition operation between two boolean values:
 | 1  | 0   | 1   |
 | 1  | 1   | 1   |
 
-## 2.3 Implementation Using Nand Only
+## Implementation Using Nand Only
 
 ![Or from Nand Gate](../images/2-or-from-nand.png)
 

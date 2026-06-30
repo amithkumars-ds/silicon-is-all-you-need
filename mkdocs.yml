@@ -35,3 +35,18 @@ nav:
     - Not Gate: ch01/1-not-gate.md
     - Or Gate: ch01/2-or-gate.md
     - And Gate: ch01/3-and-gate.md
+    - Xor Gate: ch01/4-xor-gate.md
+  - "Chapter 2: Boolean Arithmetic": 
+    - Half Adder: ch02/1-half-adder.md
+    - Full Adder: ch02/2-full-adder.md
+    - Incrementor: ch02/3-inc16-adder.md
+    - ALU: ch02/4-alu.md
+  - "Chapter 3: Memory":
+    - Bit: ch03/1-bit.md
+    - Register: ch03/2-register.md
+    - RAM8: ch03/3-ram8.md
+    - RAM64: ch03/4-ram64.md
+    - RAM512: ch03/5-ram512.md
+    - RAM4K: ch03/6-ram4k.md
+    - RAM16K: ch03/7-ram16k.md
+    - PC: ch03/8-pc.md
