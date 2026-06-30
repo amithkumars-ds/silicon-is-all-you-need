@@ -32,5 +32,6 @@ markdown_extensions:
 nav:
   - Home: index.md
   - "Chapter 1: Boolean Logic":
-    - And Gate: ch01/and-gate.md
-    - Or Gate: ch01/or-gate.md
+    - Not Gate: ch01/1-not-gate.md
+    - Or Gate: ch01/2-or-gate.md
+    - And Gate: ch01/3-and-gate.md
