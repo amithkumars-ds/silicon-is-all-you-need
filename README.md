@@ -62,6 +62,5 @@ silicon-is-all-you-need/
 ## Philosophy
 
 ```
-Everything begins with NAND.
-Everything else is abstraction.
+Everything begins with NAND and ends in abstraction.
 ```
