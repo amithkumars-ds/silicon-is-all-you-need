@@ -31,7 +31,7 @@
 
 - [x] **Boolean Logic** — 15 chips from NOT to MUX/DMUX, all reduced to NAND
 - [x] **Boolean Arithmetic** — adders, incrementer, ALU
-- [ ] **Memory** — flip-flops, registers, RAM, program counter
+- [x] **Memory** — flip-flops, registers, RAM, program counter
 - [ ] **Machine Language** — assembly programs on the Hack platform
 - [ ] **Computer Architecture** — CPU + memory + instruction fetch cycle
 
@@ -55,6 +55,7 @@ silicon-is-all-you-need/
 ├── Part1-Hardware/
 │   └── Project1-BooleanLogic/
 │   └── Project2-BooleanArithmetic/
+│   └── Project3-Memory/
 └── Part2-Software/
 ```
 
