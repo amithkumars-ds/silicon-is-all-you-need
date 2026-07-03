@@ -32,6 +32,7 @@
 - [x] **Memory** — flip-flops, registers, RAM, program counter
 - [x] **Machine Language** — assembly programs on the Hack platform
 - [ ] **Computer Architecture** — CPU + memory + instruction fetch cycle
+- [ ] **Assembler** - converts machine language to bit representation
 
 ### Part 2 — Software
 
