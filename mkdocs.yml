@@ -36,6 +36,8 @@ nav:
     - Or Gate: ch01/2-or-gate.md
     - And Gate: ch01/3-and-gate.md
     - Xor Gate: ch01/4-xor-gate.md
+    - Mux Gate: ch01/5-mux-gate.md
+    - DMux Gate: ch01/6-dmux-gate.md
   - "Chapter 2: Boolean Arithmetic": 
     - Half Adder: ch02/1-half-adder.md
     - Full Adder: ch02/2-full-adder.md
