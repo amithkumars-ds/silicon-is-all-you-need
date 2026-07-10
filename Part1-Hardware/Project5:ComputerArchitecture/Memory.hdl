@@ -22,5 +22,30 @@ CHIP Memory {
     OUT out[16];
 
     PARTS:
-	//// Replace this comment with your code.
+	// RAM Select Adress: 0 to 16383
+    // address[14] = 0
+    Not(in=address[14], out=ramsel);
+    And(a=ramsel,b=load,out=loadram);
+
+    // Screen select: address[14] = 1 AND address[13] = 0
+    Not(in=address[13], out=notA13);
+    And(a=address[14],b=notA13,out=screensel);
+    And(a=screensel,b=load,out=loadscreen);
+
+    // RAM16 Block
+    RAM16K(in=in, load=loadram, address=address[0..13], out=ramout);
+
+    // Screen Block
+    Screen(in=in, load=loadscreen, address=address[0..12], out=screenout);
+
+    // KeyBoard Block
+    Keyboard(out=keyout);
+
+    // Output Selection
+    // First choose between RAM and Screen (based on address[14])
+    Mux16(a=ramout, b=screenout, sel=address[14], out=ramorscreen);
+
+    // Then choose between (RAM/Screen) vs Keyboard
+    And(a=address[14], b=address[13], out=keysel);
+    Mux16(a=ramorscreen, b=keyout, sel=keysel, out=out);
 }
