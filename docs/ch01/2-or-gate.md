@@ -1,8 +1,8 @@
-# 1.2 OR Gate
+# 1.2 OR Chip
 
 ## Concept
 
-The OR gate performs the logical addition operation between two boolean values:
+The OR Chip performs the logical addition operation between two boolean values:
 
 - If `a = 0`, `b = 0` then `out = 0`
 - If `a = 0`, `b = 1` then `out = 1`
@@ -20,7 +20,7 @@ The OR gate performs the logical addition operation between two boolean values:
 
 ## Implementation Using Nand Only
 
-![Or from Nand Gate](../images/2-or-from-nand.png)
+![Or from Nand Chip](../images/2-or-from-nand.png)
 
 **Logic**
 
@@ -29,11 +29,11 @@ inputs: a, b
 
 nand1:
     inputs: a = a, b = a
-    output = (a) Nand (a) = a'   // as seen in the NOT gate
+    output = (a) Nand (a) = a'   // as seen in the NOT Chip
 
 nand2:
     inputs: a = b, b = b
-    output = (b) Nand (b) = b'   // as seen in the NOT gate
+    output = (b) Nand (b) = b'   // as seen in the NOT Chip
 
 nand3:
     inputs: a = a', b = b'
@@ -47,7 +47,7 @@ nand3:
 
 ```hdl
 /**
- * Or gate:
+ * Or Chip:
  * if (a or b) out = 1, else out = 0
  */
 CHIP Or {

@@ -1,8 +1,8 @@
-# 1.5 MUX Gate
+# 1.5 MUX Chip
 
 ## Concept
 
-The MUX gate acts as a hardware if-else system, it implements the logic as'+bs.
+The MUX Chip acts as a hardware if-else system, it implements the logic as'+bs.
 
 ## Truth Table
 
@@ -19,7 +19,7 @@ The MUX gate acts as a hardware if-else system, it implements the logic as'+bs.
 
 ## Implementation Using Nand Only
 
-![2:1 Mux from Nand Gate](../images/4-xor-from-nand.png)
+![2:1 Mux from Nand Chip](../images/4-xor-from-nand.png)
 
 **Logic**
 

@@ -1,8 +1,8 @@
-# 1.4 XOR Gate
+# 1.4 XOR Chip
 
 ## Concept
 
-The XOR gate performs the logical operation `ab'+a'b`
+The XOR Chip performs the logical operation `ab'+a'b`
 
 ## Truth Table
 
@@ -15,7 +15,7 @@ The XOR gate performs the logical operation `ab'+a'b`
 
 ## Implementation Using Nand Only
 
-![And from Nand Gate](../images/4-xor-from-nand.png)
+![And from Nand Chip](../images/4-xor-from-nand.png)
 
 **Logic**
 

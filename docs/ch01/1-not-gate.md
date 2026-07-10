@@ -1,8 +1,8 @@
-# 1.1 NOT Gate
+# 1.1 NOT Chip
 
 ## Concept
 
-The NOT gate inverts the input:
+The NOT Chip inverts the input:
 
 - If `in = 1`, then `out = 0`
 - If `in = 0`, then `out = 1`
@@ -16,7 +16,7 @@ The NOT gate inverts the input:
 
 ## Implementation Using Nand Only
 
-![Not from Nand Gate](../images/1-not-from-nand.png)
+![Not from Nand Chip](../images/1-not-from-nand.png)
 
 **Logic**
 
@@ -31,7 +31,7 @@ output = (in) Nand (in)
 
 ```hdl
 /**
- * Not gate:
+ * Not Chip:
  * if (in) out = 0, else out = 1
  */
 CHIP Not {

@@ -1,8 +1,8 @@
-# 1.6 DMux Gate
+# 1.6 DMux Chip
 
 ## Concept
 
-The DMux gate is the inverse of Mux — it acts as a hardware switch, routing a single input to one of two outputs depending on sel. It implements a = in·sel' and b = in·sel.
+The DMux Chip is the inverse of Mux — it acts as a hardware switch, routing a single input to one of two outputs depending on sel. It implements a = in·sel' and b = in·sel.
 
 ## Truth Table
 
@@ -13,9 +13,9 @@ The DMux gate is the inverse of Mux — it acts as a hardware switch, routing a 
 | 1 | 0 | 1 | 0 |
 | 1 | 1 | 0 | 1 |
 
-## Implementation Using Not and And Gates
+## Implementation Using Not and And Chips
 
-![DMux from Not and And](../images/6-dmux-gate.png)
+![DMux from Not and And](../images/6-dmux-Chip.png)
 
 **Logic**
 

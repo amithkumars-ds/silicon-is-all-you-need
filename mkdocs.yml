@@ -32,6 +32,12 @@ markdown_extensions:
 nav:
   - Home: index.md
   - "Chapter 1: Boolean Logic":
+    - Not Chip: ch01/1-not-Chip.md
+    - Or Chip: ch01/2-or-Chip.md
+    - And Chip: ch01/3-and-Chip.md
+    - Xor Chip: ch01/4-xor-Chip.md
+    - Mux Chip: ch01/5-mux-Chip.md
+    - DMux Chip: ch01/6-dmux-Chip.md
     - Not Gate: ch01/1-not-gate.md
     - Or Gate: ch01/2-or-gate.md
     - And Gate: ch01/3-and-gate.md
