@@ -55,6 +55,8 @@ silicon-is-all-you-need/
 │   └── Project1-BooleanLogic/
 │   └── Project2-BooleanArithmetic/
 │   └── Project3-Memory/
+│   └── Project4-MachineLanguage/
+│   └── Project5-ComputerArchitectures/
 └── Part2-Software/
 ```
 
