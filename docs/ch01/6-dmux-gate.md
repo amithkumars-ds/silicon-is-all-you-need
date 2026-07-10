@@ -15,7 +15,7 @@ The DMux Chip is the inverse of Mux — it acts as a hardware switch, routing a 
 
 ## Implementation Using Not and And Chips
 
-![DMux from Not and And](../images/6-dmux-Chip.png)
+![DMux from Not and And](../images/6-dmux-gate.png)
 
 **Logic**
 
