@@ -54,7 +54,7 @@
 - [x] [Project2-BooleanArithmetic](./Part1-Hardware/Project2%3ABooleanArithmetic)
 - [x] [Project3-Memory](./Part1-Hardware/Project3%3AMemory)
 - [x] [Project4-MachineLanguage](./Part1-Hardware/Project4%3AMachineLanguage)
-- [x] [Project5-ComputerArchitectures](./Part1-Hardware/Project5%3AComputerArchitectures)
+- [x] [Project5-ComputerArchitectures](./Part1-Hardware/Project5%3AComputerArchitecture)
 - [x] [Project6-Assembler](./Part1-Hardware/Project6%3AAssembler)
 
 **Part2-Software**
