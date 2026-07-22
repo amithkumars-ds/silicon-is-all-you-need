@@ -49,15 +49,21 @@
 
 ## Structure
 
-<pre>
-├── Part1:Hardware/
-│   └── <a href="Part1:Hardware/Project1%3ABooleanLogic">Project1:BooleanLogic</a>
-│   └── <a href="Part1:Hardware/Project2%3ABooleanArithmetic">Project2:BooleanArithmetic</a>
-│   └── <a href="Part1:Hardware/Project3%3AMemory">Project3:Memory</a>
-│   └── <a href="Part1:Hardware/Project4%3AMachineLanguage">Project4:MachineLanguage</a>
-│   └── <a href="Part1:Hardware/Project5%3AComputerArchitectures">Project5:ComputerArchitectures</a>
-│   └── <a href="Part1:Hardware/Project6%3AAssembler">Project6:Assembler</a>
-</pre>
+**Part1-Hardware**
+- [x] [Project1-BooleanLogic](./Part1-Hardware/Project1%3ABooleanLogic)
+- [x] [Project2-BooleanArithmetic](./Part1-Hardware/Project2%3ABooleanArithmetic)
+- [x] [Project3-Memory](./Part1-Hardware/Project3%3AMemory)
+- [x] [Project4-MachineLanguage](./Part1-Hardware/Project4%3AMachineLanguage)
+- [x] [Project5-ComputerArchitectures](./Part1-Hardware/Project5%3AComputerArchitectures)
+- [x] [Project6-Assembler](./Part1-Hardware/Project6%3AAssembler)
+
+**Part2-Software**
+- [ ] [Project7-VM1StackArithmetic]
+- [ ] [Project8-VM2ProgramControl]
+- [ ] [Project9-HighLevelLanguage]
+- [ ] [Project10-Compiler1Parsing]
+- [ ] [Project11-Compiler2CodeGeneration]
+- [ ] [Project12-OperatingSystem]
 
 ---
 
