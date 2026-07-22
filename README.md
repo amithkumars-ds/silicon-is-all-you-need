@@ -49,17 +49,15 @@
 
 ## Structure
 
-```
-silicon-is-all-you-need/
-├── Part1-Hardware/
-│   └── Project1-BooleanLogic/
-│   └── Project2-BooleanArithmetic/
-│   └── Project3-Memory/
-│   └── Project4-MachineLanguage/
-│   └── Project5-ComputerArchitectures/
-|   └── Project6-Assembler/
-└── Part2-Software/
-```
+<pre>
+├── Part1:Hardware/
+│   └── <a href="Part1:Hardware/Project1%3ABooleanLogic">Project1:BooleanLogic</a>
+│   └── <a href="Part1:Hardware/Project2%3ABooleanArithmetic">Project2:BooleanArithmetic</a>
+│   └── <a href="Part1:Hardware/Project3%3AMemory">Project3:Memory</a>
+│   └── <a href="Part1:Hardware/Project4%3AMachineLanguage">Project4:MachineLanguage</a>
+│   └── <a href="Part1:Hardware/Project5%3AComputerArchitectures">Project5:ComputerArchitectures</a>
+│   └── <a href="Part1:Hardware/Project6%3AAssembler">Project6:Assembler</a>
+</pre>
 
 ---
 
