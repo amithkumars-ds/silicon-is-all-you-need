@@ -32,7 +32,7 @@
 - [x] **Memory** — flip-flops, registers, RAM, program counter
 - [x] **Machine Language** — assembly programs on the Hack platform
 - [x] **Computer Architecture** — CPU + memory + instruction fetch cycle
-- [ ] **Assembler** - converts machine language to bit representation
+- [x] **Assembler** - converts machine language to bit representation
 
 ### Part 2 — Software
 
@@ -57,6 +57,7 @@ silicon-is-all-you-need/
 │   └── Project3-Memory/
 │   └── Project4-MachineLanguage/
 │   └── Project5-ComputerArchitectures/
+|   └── Project6-Assembler/
 └── Part2-Software/
 ```
 
